@@ -1,9 +1,10 @@
-# from tree import Node
+from tree import Node
 import traversals
+from recoverBST import recoverBST
 # import uniqueBinaryTrees as ubt
 # from targetSum import targetSum
 # from countGoodNodes import countGoodNodes
-from BST import BST
+# from BST import BST
 
 '''
 tree1 = Node(
@@ -44,8 +45,6 @@ tree2 = Node(
 
 
 if __name__ == '__main__':
-    bst = BST([6, 3, 4, 7, 2])
-    tree = bst.buildBST()
-    traversals.inorder(tree)
-    # print(countGoodNodes(tree1))
-    
+    tree = Node(1, Node(3, None, Node(2)))
+    # traversals.inorder(tree)
+    recoverBST(tree)
