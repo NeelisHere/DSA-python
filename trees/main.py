@@ -1,5 +1,6 @@
 import traversals
 from tree import Node
+import uniqueBinaryTrees as ubt
 
 tree = Node(
     50, 
@@ -16,4 +17,5 @@ tree = Node(
 )
 
 if __name__ == '__main__':
-    traversals.inorder(tree)
+    # traversals.inorder(tree)
+    ubt.uniqueBinaryTree(5)
