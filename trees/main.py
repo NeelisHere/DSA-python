@@ -1,7 +1,8 @@
 from tree import Node
 # import traversals
 # import uniqueBinaryTrees as ubt
-from targetSum import targetSum
+# from targetSum import targetSum
+from countGoodNodes import countGoodNodes
 
 tree1 = Node(
     5, 
@@ -40,4 +41,4 @@ tree2 = Node(
 
 if __name__ == '__main__':
     # traversals.inorder(tree)
-    print(targetSum(tree2, 22))
+    print(countGoodNodes(tree1))
