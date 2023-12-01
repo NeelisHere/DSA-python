@@ -4,17 +4,19 @@ class Node:
         self.next = next
         
 class LinkedList:
-    def __init__(self, list):
-        self.list = list
+    def __init__(self):
         self.head = None
     
-    def buildListUtils(self, index):
-        if index == len(self.list):return
-        return Node(self.list[index], self.buildListUtils(index + 1))
-        
-    def buildList(self):
-        if len(self.list):
-            self.head = self.buildListUtils(0)
+    def append(self, value):
+        new_node = Node(value)
+        if self.head is None:
+            self.head = new_node
+            return
+        else:
+            p = self.head
+            while p.next is not None:
+                p = p.next
+            p.next = new_node
 
   
 def displayList(head):
