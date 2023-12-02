@@ -6,4 +6,5 @@ def binarySubarrayWithSum(arr, k):
         s += x
         if s-k in t: count += t[s-k]
         t[s] = t[s] + 1 if s in t else 1
-    print(count)
+    print(__name__, count)
+    

@@ -6,10 +6,11 @@
 # from jobScheduling import jobScheduling
 # from longestSubstringWithoutRepeatingChars import longesSubstringWithoutRepeatingChars
 # from subarrayWithKDistinct import subarrayWithKDistinct
-from binarySubarrayWithSum import binarySubarrayWithSum
+# from binarySubarrayWithSum import binarySubarrayWithSum
+from binary_search.findPeak import findPeak
 
 if __name__ == '__main__':
-    arr = [1,1,1,1,1,0,1,1,0,1,1,0,1,0,1,1,0,1,0,1,0,0,1,0,0,0,0,0,0,0,1,1]
-    binarySubarrayWithSum(arr, 4)
+    arr = [1,2,3,1]
+    findPeak(arr)
     # print(intervals)
 
