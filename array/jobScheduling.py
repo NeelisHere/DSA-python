@@ -10,3 +10,5 @@ def jobScheduling(jobs):
                 break
     res = res[1:]
     print(res)
+    
+
