@@ -7,10 +7,11 @@
 # from longestSubstringWithoutRepeatingChars import longesSubstringWithoutRepeatingChars
 # from subarrayWithKDistinct import subarrayWithKDistinct
 # from binarySubarrayWithSum import binarySubarrayWithSum
-from binary_search.findPeak import findPeak
+# from binary_search.findPeak import findPeak
+from binary_search.rotatedSortedArray import findStart
 
 if __name__ == '__main__':
-    arr = [1,2,3,1]
-    findPeak(arr)
+    arr = [6,7,0,1,2,3,4,5]
+    findStart(arr)
     # print(intervals)
 
