@@ -8,10 +8,11 @@
 # from subarrayWithKDistinct import subarrayWithKDistinct
 # from binarySubarrayWithSum import binarySubarrayWithSum
 # from binary_search.findPeak import findPeak
-from binary_search.rotatedSortedArray import findStart
+# from binary_search.rotatedSortedArray import findStart
+from binary_search.bookAllocation import bookAllocation
 
 if __name__ == '__main__':
-    arr = [6,7,0,1,2,3,4,5]
-    findStart(arr)
+    arr = [25, 46, 28, 49, 24]
+    bookAllocation(arr, 5, 4)
     # print(intervals)
 
