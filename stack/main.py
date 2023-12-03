@@ -1,5 +1,5 @@
 # from infixToPostfix import infixToPostfix
-from nextGreaterElement import *
+from nextElement import *
 
 if __name__ == '__main__':
     # infixToPostfix('a+b*(c^d-e)^(f+g*h)-i')
