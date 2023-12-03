@@ -8,6 +8,7 @@ import traversals
 # from BST import bst
 # from treeDiameter import treeDiameter
 # from isSameTree import isSameTree
+from TreeView import TreeView
 
 tree1 = Node(
     5, 
@@ -30,7 +31,11 @@ tree2 = Node(
         Node(
             11,
             Node(7),
-            Node(2)
+            Node(
+                2,
+                Node(1, Node(10), None),
+                None
+            )
         ),
         Node(3),
     ), 
@@ -50,4 +55,5 @@ tree = Node(1, Node(3, None, Node(2)))
 if __name__ == '__main__':
     # root = bst([5,6,7,8,1,2,3,4])
     traversals.zigzagLevelOrder(tree2)
-    
+    t = TreeView()
+    t.sideView(tree2)
