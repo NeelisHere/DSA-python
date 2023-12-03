@@ -39,7 +39,7 @@ class TreeView:
             
         return self.res
     
-    # left/right node in each horizontal level 
+    # left(0)/right(-1)-most node in each horizontal level 
     def sideView(self, root, side=True):
         if not root: return []
         side = -1 if side else 0
