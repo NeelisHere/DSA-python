@@ -7,7 +7,7 @@ import traversals
 # from countGoodNodes import countGoodNodes
 # from BST import bst
 # from treeDiameter import treeDiameter
-from isSameTree import isSameTree
+# from isSameTree import isSameTree
 
 tree1 = Node(
     5, 
@@ -49,6 +49,5 @@ tree = Node(1, Node(3, None, Node(2)))
 
 if __name__ == '__main__':
     # root = bst([5,6,7,8,1,2,3,4])
-    # traversals.inorder(tree2)
-    isSameTree(tree2, tree1)
+    traversals.zigzagLevelOrder(tree2)
     
