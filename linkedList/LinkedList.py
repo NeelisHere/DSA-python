@@ -20,9 +20,9 @@ class LinkedList:
   
 def displayList(head):
     p = head
-    displayString = ''
+    res = []
     while p:
-        displayString += f'{p.val}->'
+        res.append(p.val)
         p = p.next
-    print(displayString[:-2])    
+    print(res)    
 
