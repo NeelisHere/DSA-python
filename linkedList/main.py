@@ -8,7 +8,7 @@ from checkPalindrome import checkPalindrome
 
 if __name__ == '__main__':
     h1 = LinkedList()
-    for node in [1,2,2,1]:
+    for node in [1,2,3,2,1]:
         h1.append(node)
     displayList(h1.head)
     checkPalindrome(h1.head)

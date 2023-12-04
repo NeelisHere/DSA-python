@@ -11,6 +11,7 @@ def checkPalindrome(head):
     slow.next = reverseLinkedList(slow.next)
     slow = slow.next
     p = head
+    displayList(p)
     while slow:
         if p.val != slow.val: 
             print(False)
