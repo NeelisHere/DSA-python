@@ -1,16 +1,14 @@
 from LinkedList import LinkedList, displayList
 # from reverseLinkedList import reverseLinkedList
-from findMiddle import findMiddle
+# from findMiddle import findMiddle
 # from detectCycle import detectCycle
-from detectLoopStart import detectLoopStart
+# from detectLoopStart import detectLoopStart
+from removeDuplicate import removeDuplicate
 
 if __name__ == '__main__':
-    l = LinkedList()
-    for val in [12, 13, 14, 15, 16]:
-        l.append(val)
-    # displayList(l.head)
-    fast, slow = findMiddle(l.head)
-    fast.next = slow
-    # print(fast.val, slow.val)
-    ans = detectLoopStart(l.head)
-    print(ans.val)
+    h1 = LinkedList()
+    for node in [12,11,12,21,41,43,21]:
+        h1.append(node)
+    displayList(h1.head)
+    removeDuplicate(h1.head)
+    
