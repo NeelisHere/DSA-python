@@ -70,3 +70,37 @@ def verticalTraversal(root):
         res.append(temp)
 
     return res
+
+def boundaryTraversal(root):
+
+    left, leaves, right = [], [], []
+
+    def findLeftBoundary(root):
+        if root:
+            left.append(root.data)
+            if root.left: findLeftBoundary(root.left)
+            elif root.right: findLeftBoundary(root.right)
+            else: return 
+            
+    def findLeaves(root):
+        if root:
+            findLeaves(root.left)
+            if not root.left and not root.right:
+                leaves.append(root.data)
+            findLeaves(root.right)
+
+    def findRightBoundary(root):
+        if root:
+            if root.right: findRightBoundary(root.right)
+            elif root.left: findRightBoundary(root.left)
+            right.append(root.data)
+
+    findLeftBoundary(root.left)
+    findLeaves(root.left)
+    left = left + leaves[1:]
+    leaves = []
+    findLeaves(root.right)
+    findRightBoundary(root.right)
+    right = leaves[:-1] + right
+    res = [root.data] + left + right
+    print(res)
