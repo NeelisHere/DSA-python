@@ -3,12 +3,13 @@ from LinkedList import LinkedList, displayList
 # from findMiddle import findMiddle
 # from detectCycle import detectCycle
 # from detectLoopStart import detectLoopStart
-from removeDuplicate import removeDuplicate
+# from removeDuplicate import removeDuplicate
+from checkPalindrome import checkPalindrome
 
 if __name__ == '__main__':
     h1 = LinkedList()
-    for node in [12,11,12,21,41,43,21]:
+    for node in [1,2,2,1]:
         h1.append(node)
     displayList(h1.head)
-    removeDuplicate(h1.head)
+    checkPalindrome(h1.head)
     
