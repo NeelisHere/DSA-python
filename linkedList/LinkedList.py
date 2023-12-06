@@ -3,20 +3,17 @@ class Node:
         self.val = value
         self.next = next
         
-class LinkedList:
-    def __init__(self):
-        self.head = None
-    
-    def append(self, value):
-        new_node = Node(value)
-        if self.head is None:
-            self.head = new_node
-        else:
-            p = self.head
-            while p.next is not None:
-                p = p.next
-            p.next = new_node
+def append(head, value):
+    if head is None:
+        return Node(value)
+    head.next = append(head.next, value)
+    return head 
 
+def buildList(arr):
+    h = None
+    for val in arr:
+        h = append(h, val)
+    return h
   
 def displayList(head):
     p = head
@@ -24,5 +21,5 @@ def displayList(head):
     while p:
         res.append(p.val)
         p = p.next
-    print(res)    
+    print(' '.join(list(map(lambda x: str(x), res))))    
 
