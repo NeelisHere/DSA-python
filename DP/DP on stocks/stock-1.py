@@ -1,3 +1,7 @@
+'''
+Max time to buy and sell stocks 1
+'''
+
 def maxTimeToBuyAndSellStocks1(prices):
     bp = prices[0]
     res = 0
