@@ -2,7 +2,8 @@
 # from DP.MCM import mcm
 # from DP.LCS.lcs import lcs
 # from DP.LCS.lps import lps
-from DP.LCS.printLCS import printLCS
+# from DP.LCS.printLCS import printLCS
+from DP.LCS.minInsertions import minInsertions
 
 # g = {
 #     1: [2, 3, 4],
@@ -17,6 +18,6 @@ from DP.LCS.printLCS import printLCS
 # mcm.minOperations(a)
 
 # lcs('breakfast', 'deadbeat')
-printLCS('bbabcbcab', 'bbabcbcab'[::-1])
+minInsertions('bbabcbcab')
 
     
