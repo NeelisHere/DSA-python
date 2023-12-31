@@ -1,6 +1,6 @@
 from typing import *
 
-def findLCS(s1: str, s2: str) -> str:
+def printLCS(s1: str, s2: str) -> str:
     n, m = len(s1), len(s2)
     dp = [[0]*(m + 1) for _ in range(n + 1)]
     

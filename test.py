@@ -1,5 +1,8 @@
 # from graphs.detectCycleUndir import detectCycleUndir
-from DP.MCM import mcm
+# from DP.MCM import mcm
+# from DP.LCS.lcs import lcs
+# from DP.LCS.lps import lps
+from DP.LCS.printLCS import printLCS
 
 # g = {
 #     1: [2, 3, 4],
@@ -10,8 +13,10 @@ from DP.MCM import mcm
 
 # detectCycleUndir(g)
 
-a = [10, 20, 30, 40, 50]
-mcm.minOperations(a)
+# a = [10, 20, 30, 40, 50]
+# mcm.minOperations(a)
 
+# lcs('breakfast', 'deadbeat')
+printLCS('bbabcbcab', 'bbabcbcab'[::-1])
 
     
