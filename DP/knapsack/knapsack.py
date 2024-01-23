@@ -1,4 +1,4 @@
-def knapsack(profit, weight, capacity):
+def knapsackMemo(profit, weight, capacity):
     n = len(profit)
     dp = [[-1] * (capacity + 1) for _ in range(n + 1)]
     def solve(i, w):
@@ -15,4 +15,14 @@ def knapsack(profit, weight, capacity):
     res = solve(0, 0)
     print(res)
     # print(dp)
-    
+
+
+def knapSackTabulation(W, wt, val, n):
+    dp = [[0] * (W + 1) for _ in range(n + 1)]
+    for i in range(1, n + 1):
+        for j in range(1, W + 1):
+            dp[i][j] = dp[i - 1][j]
+            if j - wt[i - 1] >= 0:
+                dp[i][j] = max(dp[i][j], val[i - 1] + dp[i - 1][j - wt[i - 1]])
+    return dp[n][W]
+
