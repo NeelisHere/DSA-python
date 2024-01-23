@@ -5,7 +5,8 @@ def robHouseRec(a):
     dp = defaultdict(lambda: -1)
 
     def solve(i):
-        if i >= len(a): return 0
+        if i >= len(a):
+            return 0
         if dp[i] == -1:
             op1 = a[i] + solve(i + 2)
             op2 = solve(i + 1)
