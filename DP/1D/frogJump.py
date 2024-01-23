@@ -26,6 +26,7 @@ def frogJumpRec(n, h):
                 abs(h[i - 2] - h[i]) + solve(i - 2)
             )
         return dp[i]
+
     res = solve(n - 1)
     print(res)
     
