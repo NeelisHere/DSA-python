@@ -2,6 +2,7 @@
 Max time to buy and sell stocks 2
 '''
 
+
 # greedy method
 def solve1(prices):
     res = 0
@@ -15,6 +16,7 @@ def solve1(prices):
 def solve2(prices):
     n = len(prices)
     dp = [[-1 for _ in range(2)] for _ in range(n)]
+
     def solve(i, canBuy):
         if i == n: return 0
         if dp[i][canBuy] == -1:

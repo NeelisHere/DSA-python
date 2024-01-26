@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def nextSmaller(A):
     n = len(A)
     ns = [n for _ in A]
@@ -44,4 +45,3 @@ def maximalRectangle(A):
         # print(row)
         res = max(res, largestHistogram(row))
     print(res)
-    # return res
