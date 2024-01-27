@@ -10,7 +10,7 @@ def findWays(a: List[int], k: int) -> int:
         if i >= len(a):
             return int(k == 0)
         if dp[i][k] == -1:
-            dp[i][k] = solve(i + 1, k - a[i]) or solve(i + 1, k)
+            dp[i][k] = solve(i + 1, k - a[i]) + solve(i + 1, k)
         return dp[i][k]
 
     return solve(0, k)
