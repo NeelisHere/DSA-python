@@ -1,28 +1,30 @@
-def knapsackMemo(profit, weight, capacity):
-    n = len(profit)
+from typing import *
+
+
+def knapsackMemo(n, wt, cost, capacity):
     dp = [[-1] * (capacity + 1) for _ in range(n + 1)]
+
     def solve(i, w):
-        if i >= n or w >= capacity: 
-            return 0
-        if dp[i][w] != -1: 
-            return dp[i][w]
-        dp[i][w] = solve(i + 1, w) if w + weight[i] > capacity else max(
-            profit[i] + solve(i + 1, w + weight[i]),
-            solve(i + 1, w)
-        )
+        if i == 0:
+            return int(bool(wt[i] <= w)) * cost[i]
+        if dp[i][w] == -1:
+            res = solve(i - 1, w)
+            if w - wt[i] >= 0:
+                res = max(res, cost[i] + solve(i - 1, w - wt[i]))
+            dp[i][w] = res
         return dp[i][w]
-    
-    res = solve(0, 0)
-    print(res)
-    # print(dp)
+
+    return solve(n - 1, capacity)
 
 
-def knapSackTabulation(W, wt, val, n):
-    dp = [[0] * (W + 1) for _ in range(n + 1)]
+def knapsackTab(n: int, wt: List[int], cost: List[int], capacity):
+    dp = [[0] * (capacity + 1) for _ in range(n + 1)]
     for i in range(1, n + 1):
-        for j in range(1, W + 1):
+        for j in range(1, capacity + 1):
             dp[i][j] = dp[i - 1][j]
             if j - wt[i - 1] >= 0:
-                dp[i][j] = max(dp[i][j], val[i - 1] + dp[i - 1][j - wt[i - 1]])
-    return dp[n][W]
+                dp[i][j] = max(dp[i][j], cost[i - 1] + dp[i - 1][j - wt[i - 1]])
+    res = dp[n][capacity]
+    print(res)
+    
 
