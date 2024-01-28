@@ -2,7 +2,7 @@ from typing import *
 import sys
 
 
-def coinChange(coins: List[int], target: int) -> int:
+def minCoinsMemo(coins: List[int], target: int) -> int:
     n = len(coins)
     dp = [[-1] * (target + 1) for _ in range(n + 1)]
 
