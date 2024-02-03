@@ -1,4 +1,7 @@
 from typing import *
+"""
+https://leetcode.com/problems/number-of-longest-increasing-subsequence/
+"""
 
 
 def findNumberOfLIS(a: List[int]) -> int:
