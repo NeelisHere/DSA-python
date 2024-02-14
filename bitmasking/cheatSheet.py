@@ -6,7 +6,7 @@ def toBin(x, maxb=64):
         res += '1' if (x & (1 << i)) else '0'
     return ''.join(list(reversed(res)))
 
-n_bit = lambda n: math.ceil(math.log2(n))
+max_bits = lambda n: math.ceil(math.log2(n + 1))
 get_bit = lambda n, i: 1 if (n & (1 << i)) else 0
 isOdd = lambda n: bool(n & 1)
 multiply_2powk = lambda n, k: n << k

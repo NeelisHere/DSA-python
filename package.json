@@ -1,0 +1,14 @@
+{
+  "name": "dsa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "main": "python main.py < input.txt",
+    "git": "git add . && git commit -m",
+    "postgit": "git push --all"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
