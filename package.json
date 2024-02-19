@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "main": "python main.py < input.txt",
+    "main": "python main.py",
+    "main-cp": "python main.py < input.txt",
     "git": "git add . && git commit -m",
     "postgit": "git push --all"
   },

@@ -15,21 +15,27 @@ isPower2 = lambda n: bool(n & (n - 1) == 0)
 
 def set_bit(n, i):
     n |= (1 << i)
+    return n
 
 def clear_bit(n, i):
     n &= ~(1 << i)
+    return n
 
 def clear_rightmost_bit(n):
     n &= (n - 1)
+    return n
 
 def toggle_bit(n, i):
     n ^= (1 << i)
+    return n
 
 def clear_lastk(n, k):
     n &= (-1 << k)
+    return n
 
 def clear_range(n, l, r):
     n &= (-1 << (l + 1)) | ~(-1 << (r - 1))
+    return n
 
 def count_set_bits(n):
     count, x = 0, n
